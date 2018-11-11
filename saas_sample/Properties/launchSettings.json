@@ -1,7 +1,11 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://saasapp",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:9863",
       "sslPort": 0
@@ -16,12 +20,13 @@
       }
     },
     "saas_sample": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
+      "launchUrl": "http://saasapp",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }

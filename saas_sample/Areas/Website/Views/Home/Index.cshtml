@@ -1,0 +1,26 @@
+﻿@model IEnumerable<saas_sample.Models.TenantViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Web site </h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Add New Tenant</h2>
+        <form asp-area="Website" asp-controller="Home" asp-action="AddTenant" method="post">
+            <input name="name" id="name" />
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="col-md-3">
+        <h2>Tenants List</h2>
+        <ul>
+            @foreach (var tenant in Model)
+            {
+                <li><a href="http://@tenant.SiteUrl">@tenant.Name (@tenant.Id)</a></li>
+            }            
+        </ul>
+    </div>    
+</div>

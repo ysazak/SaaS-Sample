@@ -1,0 +1,14 @@
+﻿@model TenantInfo
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "../Shared/_Layout.cshtml";
+
+    //var feature = Context.Features.Get<ITenantSiteFeature>();
+}
+
+<h2>@Model.Name area</h2>
+<div>@*@feature.Tenant.Name - @feature.Tenant.Id*@</div>
+<a asp-controller="Contact" asp-action="Index">Go to Contacts</a>
+
